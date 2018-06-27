@@ -1,0 +1,36 @@
+﻿<Window x:Class="_5_24.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_5_24"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel x:Name="TaskList" Background="White" Grid.Row="1" Margin="0,10,0,70" Grid.RowSpan="2"></StackPanel>
+
+        <Grid Grid.Row="1" Background="Black" HorizontalAlignment="Left" Width="520" Margin="10,0,-13,0" Grid.RowSpan="2" RenderTransformOrigin="0.371,0.488" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="413*"/>
+                <ColumnDefinition Width="107*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Width="40" HorizontalAlignment="Left" Margin="1,140,0,140" x:Name="addTask" MouseDown="addTask_MouseDown" Grid.Column="1">
+                <Border CornerRadius="5" Background="Black" BorderBrush="Cyan" BorderThickness="2" Margin="48,84,-415,-103"></Border>
+                <TextBlock FontSize="40" Height="52" VerticalAlignment="Center" TextAlignment="Center" Foreground="Cyan" Margin="-326,84,36,-96" >今天想要吃什麼</TextBlock>
+            </Grid>
+
+
+            <StackPanel Width="500" HorizontalAlignment="Right" Orientation="Vertical" Margin="0,102,0,158" Grid.ColumnSpan="2">
+                <TextBlock HorizontalAlignment="Center"  Height="50" Margin="124,2,80,0" FontSize="40" Foreground="Cyan" RenderTransformOrigin="0.537,0.702" Width="296"><Run Text="今天吃"/><Run Text=""/></TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
